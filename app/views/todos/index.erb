@@ -8,21 +8,38 @@
     </head>
     <body>
         <H1>My list</H1>
-        <ul> <li>
+        <ul> 
+        <li class="todo-item">
+            <a href=" /todos/1">
+                To do 1
+            </a>
+        </li>
+            
             <input type="checkbox" />
            <a href="show.html">study for Ap Psych Exam</a>
            <span class="estimate">60 minutes</span>
-            <li>
+            <li class="todo-item">
+                <a href="/todos/2">
+                   To do 2 
+                </a>
+                </li>
                 <input type="checkbox" /><a href="show.html"> finish u.s. history questions</a>
                 <span class="estimate">20 minutes</span></li>
-            <li> <input type="checkbox" /><a href="show.html">study for trig class
+            <li class="/todo-item">
+                <a href="/todos/3">
+                    To do 3 
+                </a>
+                </li>
+                <input type="checkbox" /><a href="show.html">study for trig class
             </a>
             <span class="estimate">30 minutes</span></li></li>
         </ul>
-        <div id="new-todo-block">
-        <input type="text" id="new-todo-description" placeholder="task info"/>
-        <input type="number" id="new-pomodoro-estimate" placeholder="enter"/> 
-        placeholder="time interval"/>
+        <form action="/todos" method="POST" id="new-todo-block">
+            <input type="hidden"
+                    name="authenticity_token"
+                    value="<%=form_authenticity_token%>"/>
+        <input type="text" name="description" name="title" class="todo-form" placeholder="title"/>
+        <input type="number" name="duration" ssid="new-pomodoro-estimate" placeholder="enter"/> 
       <input type=submit id="add-new-todo-button" value="add todo" id="add-new-todo-button" />
-      </div
+      </form>
       

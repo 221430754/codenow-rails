@@ -30,5 +30,8 @@ class TodosController<ApplicationController
          end 
     
      end  
+     def create 
+         #createtodohere
+         redirect_to '/todos' end 
  end 
     
