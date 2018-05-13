@@ -18,6 +18,6 @@ ActiveRecord::Schema.define(version: 20180512185846) do
     t.string   "description"
     t.integer  "duration"
     t.datetime "deadline"
+    t.boolean  "completed"
   end
-
 end

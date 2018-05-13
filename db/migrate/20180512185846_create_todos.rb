@@ -5,6 +5,7 @@ class CreateTodos < ActiveRecord::Migration
       t.string     :description
       t.integer    :duration
       t.datetime   :deadline 
+      t.boolean    :completed 
     end
   end
 end

@@ -1,37 +1,31 @@
 class TodosController<ApplicationController 
     def index 
-    
-        
+     @todos = Todo.all
     end 
+
     def show 
-        id = params[:id]
-        if id== '1'
-            @todo= {
-            title: 'U.S. history',
-            description: 'midtermweekprep',
-            }
-        elsif id == '2'
-            @todo= {
-                title: 'English',
-                description: 'research essay',
-            }
-        elsif id == '3'
-        
-            @todo= {
-                title: 'physics',
-                description: 'study for final',
-            }
-        else 
-            @todo= {
-                title: 'house chores',
-                description: 'clean room',
-            }
-            
-         end 
+       @todo = Todo.find(params[:id])
+    end 
+      
+       
+     def create
+         completed = params[:completed] =='on'
+        Todo.create(
+            name: params[:name], 
+            description: params[:description],
+            duration: params[:duration],
+            deadline: params[:deadline],
+            completed: completed,
+        )
+         redirect_to '/todos' 
+    end 
     
-     end  
-     def create 
-         #createtodohere
-         redirect_to '/todos' end 
- end 
+    def destroy
+        todo= Todo.find (params[:id])
+        todo.destroy
+        redirect_to '/todos' 
+    end
+    
+    
+end 
     

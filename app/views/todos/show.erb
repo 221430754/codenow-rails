@@ -1,16 +1,13 @@
-<body> 
-<input type="checkbox"> 
-<h2>Make the curriculum 4 pomodoros</h2>
-<a href="#">Edit
-
-</a>
-<a href="#">Delete</a>
-<a href="/todos" id="go-back">Go back... </a>
-</body>
-This is todo number <%= @id %>
-<h2>
-    <%= @todo [:title]%>
-</h2>
-<P>
-    <%= @todo[:description]%>
-</P>
+  <h2><%= @todo.name%></h2> 
+        <p><%= @todo.description%></p> 
+        <p><%= @todo.duration%></p>
+        <p><%= @todo.deadline%></p>
+  <p> Completed? <%=@todo.completed ? 'Yes':'No'%></p> 
+  <form method="POST"
+        action="/todos/<%= @todo.id%>/delete">
+     <form action="/todos" method="POST" id="new-todo-block">
+            <input type="hidden"
+                    name="authenticity_token"
+                    value="<%=form_authenticity_token%>"/>
+      <button class="delete">Delete</button>
+  </form>              

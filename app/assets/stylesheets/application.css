@@ -30,8 +30,12 @@ h1{
     color:F3FF33;
     background-color:#FF3399;
 }
-html{
+body{
     font-family:sans-serif;
+    background-image: url("https://s.abcnews.com/images/Entertainment/GTY_clueless_jef_150508_12x5_992.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color:#ffff00;
 }
 
 
@@ -59,5 +63,20 @@ html{
 li{
   padding: 5px;
   margin-bottom:10px;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color:#ff0066;
+    text-decoration: none;
+    font-weight:  bold;
+}
+p{ 
+    color:#ff0066;
+}
+.duration {
+    color: black;
+}
 }
 

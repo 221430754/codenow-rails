@@ -15,4 +15,21 @@ View: what you want the viewer/users to see
 params: A way for users to input data 
 instance variable (@variable): used to render value in template(end)
 erb: makes HTML "smart"
-
+get: view data 
+post: transforms data(sending data)
+migration: a way of safely modifying your database(order matters)
+schema: reflects current states of tables in database 
+SQL(relation db): query data using relationships among rows 
+Gemfile: Ruby way of managing dependencies (code libraries)
+```
+    @todos.each do |todo|
+           # todo.name
+    end
+```
+```
+    checked = 'on'
+    Completed = checked=='on' 
+    label = completed ? 'Yes' : 'No'
+```
+ Terenary operator 
+ -CRUD: Create - Read - Update - Delete
