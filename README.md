@@ -33,3 +33,13 @@ Gemfile: Ruby way of managing dependencies (code libraries)
 ```
  Terenary operator 
  -CRUD: Create - Read - Update - Delete
+ MOdel,View,Controller
+ data  , interface, logic 
+ IRL   todo task 
+ database   todo table 
+ application   todo model 
+ view   todo form 
+ what we write (todo task)
+ sql (todo table)
+ ruby (todo model)
+ html (todo form)

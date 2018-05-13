@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/todos/:id' => 'todos#show'
   post '/todos' => 'todos#create'
   post '/todos/:id/delete' => 'todos#destroy' 
+  post '/todos/:id/complete' => 'todos#complete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

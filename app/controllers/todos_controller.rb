@@ -25,6 +25,12 @@ class TodosController<ApplicationController
         todo.destroy
         redirect_to '/todos' 
     end
+    def complete 
+         todo= Todo.find (params[:id])
+         todo.update(completed:true)  
+         redirect_to '/todos'  
+    end      
+
     
     
 end 

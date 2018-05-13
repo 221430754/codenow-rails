@@ -11,3 +11,11 @@
                     value="<%=form_authenticity_token%>"/>
       <button class="delete">Delete</button>
   </form>              
+    <form method="POST"
+        action="/todos/<%= @todo.id%>/complete">
+     <form action="/todos" method="POST" id="new-todo-block">
+            <input type="hidden"
+                    name="authenticity_token"
+                    value="<%=form_authenticity_token%>"/>
+      <button class="complete">Complete</button>
+  </form>              
